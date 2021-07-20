@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lappi</title>
+    <style>
+        #map {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <link href="/static/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Diástole
+        </h1>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <div id="dash">
+                <img src="static/nico.jpg">
+                <div class="dash-item">Ricardo Leyva</div>
+                <div class="dash-item"><i class="fa fa-check" aria-hidden="true"></i> El conductor se encuentra en movimiento.</div>
+                <div class="dash-item"><i class="fa fa-check" aria-hidden="true"></i> El conductor se encuentra en ruta al destino.</div>
+                <div class="dash-item">Tiempo de retraso esperado: 2 min</div>
+                <div class="dash-item">Velocidad Media: 56 km/h</div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="map"></div>
+        </div>
+    </div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK7bhwFBja9fm9I78AJ8pfpfnCP4xf2cM&callback=initMap" async defer></script>
+    <script src="static/app.js"></script>
+
+</body>
+</html>
